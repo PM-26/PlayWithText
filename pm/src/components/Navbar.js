@@ -13,6 +13,7 @@ export default function Navbar(props) {
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
       </button>
+      {/* <button className='btn btn-primary'>Dark Mode</button> */}
     </div>
   </nav></div>
   )
