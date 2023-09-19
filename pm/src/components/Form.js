@@ -14,6 +14,10 @@ export default function Form(props) {
         let newText='';
         setText(newText)
     }
+    const handleSpaceClick=()=>{
+        let newText=text.trim();
+        setText(newText)
+    }
     const handleOnChange=(event)=>{
         setText(event.target.value)
     }
@@ -26,6 +30,7 @@ export default function Form(props) {
                 <button className='btn btn-primary my-3 mx-3' onClick={handleUpClick}>Uppercase</button>
                 <button className='btn btn-primary my-3 mx-3' onClick={handleLoClick}>Lowercase</button>
                 <button className='btn btn-primary my-3 mx-3' onClick={handleClearClick}>Clear</button>
+                <button className='btn btn-primary my-3 mx-3' onClick={handleSpaceClick}>Remove Spaces from Both Sides</button>
             </div>
         </div>
         <div className='container my-3'>
