@@ -18,6 +18,10 @@ export default function Form(props) {
         let newText=text.trim();
         setText(newText)
     }
+    const handleTitleClick=()=>{
+        let newText=text.replace(/\w\S*/g, function(text){return text.charAt(0).toUpperCase() + text.substr(1).toLowerCase();});
+        setText(newText);
+    }
     const handleOnChange=(event)=>{
         setText(event.target.value)
     }
@@ -31,6 +35,7 @@ export default function Form(props) {
                 <button className='btn btn-primary my-3 mx-3' onClick={handleLoClick}>Lowercase</button>
                 <button className='btn btn-primary my-3 mx-3' onClick={handleClearClick}>Clear</button>
                 <button className='btn btn-primary my-3 mx-3' onClick={handleSpaceClick}>Remove Spaces from Both Sides</button>
+                <button className='btn btn-primary my-3 mx-3' onClick={handleTitleClick}>Title Case</button>
             </div>
         </div>
         <div className='container my-3'>
